@@ -2,7 +2,7 @@
 
 :root {
   --font-family: 'Manrope', sans-serif;
-  --font-weight: 800;
+  --font-weight-bold: 800;
 
   --font-size-400: 1.75rem;
   
@@ -19,4 +19,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-bold);
+  background-color: var(--clr-neutral-600);
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

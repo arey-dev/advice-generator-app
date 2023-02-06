@@ -5,6 +5,7 @@
   --font-weight-bold: 800;
 
   --font-size-400: 1.75rem;
+  --font-size-300: 0.75rem;
   
   /* colors */
   --clr-primary-400: hsl(193, 38%, 86%);
@@ -30,9 +31,40 @@ body {
   line-height: 1.5;
 }
 
-.flex {
+.flex-col, .flex-col-align {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.flex-col-align {
   align-items: center;
+}
+
+.card {
+  --max-width: 33rem;
+  --margin-inline: 1.5rem;
+
+  width: min(var(--max-width), 100% - var(--margin-inline));
+  background-color: var(--clr-neutral-500);
+  margin-inline: auto;
+  padding: 2.75rem 1rem;
+  border-radius: 0.8rem;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  color: var(--clr-primary-500);
+  font-size: var(--font-size-300);
+  letter-spacing: 3px;
+  margin-bottom: 1.25rem;
+}
+
+.advice {
+  width: 28rem;
+}
+
+.img-wrapper {
+  padding-block: 2.5rem 2.125rem;
 }

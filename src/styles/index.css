@@ -1,12 +1,12 @@
-@import './reset.css';
+@import "./reset.css";
 
 :root {
-  --font-family: 'Manrope', sans-serif;
+  --font-family: "Manrope", sans-serif;
   --font-weight-bold: 800;
 
   --font-size-400: 1.75rem;
   --font-size-300: 0.75rem;
-  
+
   /* colors */
   --clr-primary-400: hsl(193, 38%, 86%);
   --clr-primary-500: hsl(150, 100%, 66%);
@@ -31,7 +31,8 @@ body {
   line-height: 1.5;
 }
 
-.flex-col, .flex-col-align {
+.flex-col,
+.flex-col-align {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,6 +52,7 @@ body {
   padding: 2.75rem 1rem;
   border-radius: 0.8rem;
   text-align: center;
+  position: relative;
 }
 
 .title {
@@ -67,4 +69,62 @@ body {
 
 .img-wrapper {
   padding-block: 2.5rem 2.125rem;
+}
+
+.button-dice {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: -2.25rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  background-color: var(--clr-primary-500);
+  border-radius: 50%;
+  border: 1px solid var(--clr-primary-500);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-dice:hover {
+  box-shadow: 0 0 15px var(--clr-primary-500);
+  transform: scale(1.1);
+}
+
+/* loader */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #ff3d00;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.loader::before {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

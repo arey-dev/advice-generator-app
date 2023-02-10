@@ -64,7 +64,7 @@ body {
 }
 
 .advice {
-  width: 28rem;
+  width: min(28rem, 100%);
 }
 
 .img-wrapper {
@@ -126,5 +126,19 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  :root {
+    --font-size-400: 1.5rem;
+  } 
+
+  .flex-col {
+    justify-content: unset;
+  }
+
+  main {
+    padding-top: 12rem;
   }
 }
